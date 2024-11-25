@@ -1,16 +1,16 @@
 ## 1. Pierwsze kontenery
 
 1. Tworzenie pierwszego konteneru
-![1](images/1-Pierwszekontenery/1.png)
+![1](images/1-Pierwsze-kontenery/1.png)
 
 2. Pobranie obrazu alpine
-![2](images/1-Pierwszekontenery/2.png)
+![2](images/1-Pierwsze-kontenery/2.png)
 
 3. Zarządzanie kontenerami 
-![3](images/1-Pierwszekontenery/3.png)
+![3](images/1-Pierwsze-kontenery/3.png)
 
 4. Izolacja kontenerów
-![4](images/1-Pierwszekontenery/4.png)
+![4](images/1-Pierwsze-kontenery/4.png)
 
 5. Test
 ![5](images/1. Pierwsze kontenery/5.png)
