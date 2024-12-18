@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  serwis:
+    image: devopsdockeruh/simple-web-service
+    entrypoint: tail -f /dev/null
+    volumes:
+      - ./logs:/usr/src/app
+    container_name: web-service-logs

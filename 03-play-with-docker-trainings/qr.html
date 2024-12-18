@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <title>Generowanie QR z Base64</title>
+</head>
+<body>
+    <div id="qr"></div>
+
+    <script>
+        // Twój ciąg Base64
+        const base64Data = "iVBORw0KGgoAAAANSUhEUgAAAMgAAADIAQAAAACFI5MzAAABs0lEQVR4Xu2WQWrFMAxEDb6WQVc3+FoGd96kJKW0O6ndROR/Er+ArfFITju/Rfs+cMdLXkL8JZmt9XV2ayO45VdClq619Thb7O7HGjL7mrH026F3eKwjJKhcW4tSsrvYGLEHbxURQ+U4R+j2q6KpxA554otDcoljhhJt4ckd+USD5IkJ9S9Rn7WlEsmp0YMRl3buWNgCooJSfkw8B170AgqI2GDv5MVg6y5V88lmVrld3UJ57obAFUQyBn6nes9kKVFCDrl5XHRI1kfRVDIx+pbjfQWWrCHMqiQlrRUdd0dKJzovuKzooSdVEPT8nHlzNHnjKgjdQUKqrLrLuYHyiU8Ldo8cp9ttCZH9Bh8NUpTV2DEVRE86lHA886MpkU/wBrNzZHQK+VE0lWB3m1C9yHneHSmXsFEMdVVW08fDs4JcQmkd67pgl6AVxB5c7N7VJG4n5hJ5EJ8fd3RM8uxcKiGoLcqXRCeggDC9tgufqNfKi9Y0nyw0xIhW1P2ihlyzUlv2PbSKXOmGTXK1iiKyXbeTDhiACmJFXVYddlkkn5CkP4VlEp3qgScryM/xkpcQ/08+AI17Y8vb1LF0AAAAAElFTkSuQmCC";
+        
+        // Utwórz obraz z Base64
+        const img = document.createElement('img');
+        img.src = `data:image/png;base64,${base64Data}`;
+        document.body.appendChild(img);
+
+        // Generowanie kodu QR z Base64
+        const qrContainer = document.getElementById('qr');
+        new QRCode(qrContainer, {
+            text: img.src, // Wstaw obraz jako dane do kodu QR
+            width: 256,
+            height: 256
+        });
+    </script>
+</body>
+</html>
